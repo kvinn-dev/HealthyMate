@@ -20,6 +20,9 @@ def create_app():
     'mysql+pymysql://root:@localhost/healthymate_db'
     )
 
+    print("DATABASE_URL =", os.getenv("DATABASE_URL"))
+    print("SQLALCHEMY_DATABASE_URI =", app.config["SQLALCHEMY_DATABASE_URI"])
+
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     # Inisialisasi db dan ekstensi lainnya
