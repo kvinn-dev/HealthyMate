@@ -8,10 +8,17 @@ def create_app():
     app = Flask(__name__) # app itu WSGI application (standar python untuk menghubungkan aplikasi web dengan server web), Flask itu framework, __name__ itu nama file ini
 
     # Konfigurasi Secret Key untuk session security
-    app.config['SECRET_KEY'] = 'htymte300526'
+    app.config['SECRET_KEY'] = os.getenv(
+    'SECRET_KEY',
+    'htymte300526'
+    )
 
     # Konfigurasi Database MySQL (ganti root & password dengan milik Anda)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost/healthymate_db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
+    'DATABASE_URL',
+    'mysql+pymysql://root:@localhost/healthymate_db'
+    )
+
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     # Inisialisasi db dan ekstensi lainnya
