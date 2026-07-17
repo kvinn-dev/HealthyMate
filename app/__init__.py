@@ -1,3 +1,4 @@
+import os
 from flask import Flask # flask itu untuk membuat aplikasi web
 from flask_migrate import Migrate
 from flask_login import LoginManager
