@@ -116,6 +116,19 @@ Dokter dapat mengajukan perubahan jadwal (hari dan jam) praktiknya melalui menu 
 
 ---
 
+
+## Teknologi yang Digunakan
+
+- **Framework Backend:** Flask 2.2.2
+- **Programming Language:** Python 3
+- **ORM:** Flask-SQLAlchemy
+- **Database Migration:** Flask-Migrate
+- **Authentication:** Flask-Login
+- **Database:** MySQL
+- **Database Driver:** PyMySQL
+- **Data Processing:** Pandas, NumPy
+- **Frontend:** HTML, CSS, Jinja2
+
 ## Struktur Project & Instalasi
 
 Untuk informasi lebih lanjut mengenai cara mengunduh project, mengatur *Virtual Environment*, konfigurasi database MySQL, migrasi, dan cara menjalankannya di komputer lokal, silakan baca panduan lengkapnya di file:
